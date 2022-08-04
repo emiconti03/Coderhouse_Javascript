@@ -1,19 +1,23 @@
 
 
-let saludos = ["Buen dia!!", "Bienvenido a la mejor pagina web", "Bienvenido! Aca podras encontrar todo lo que necesitas"];
+let saludos = [
+    'Buen dia!!', 
+    'Bienvenido a la mejor pagina web', 
+    'Bienvenido! Aca podras encontrar todo lo que necesitas'
+];
 alert(saludos[1]);
 alert(saludos[2]);
 
 
-let titulo = document.getElementById("titulo");
-let parrafo = document.getElementById("parrafo");
+let titulo = document.getElementById('titulo').innerText;
+let parrafo = document.getElementById('parrafo');
 
-titulo.innerText("Clase numero 8 - DOM - Entrega parcial");
+//titulo.innerText("Clase numero 8 - DOM - Entrega parcial");
 console.log(titulo);
 console.log(parrafo);
 
-let nombre1 = prompt("Ingrese el nombre de la persona: ");
-let edad1 = prompt("Ingrese la edad de la persona: ");
+let nombre1 = prompt('Ingrese el nombre de la persona: ');
+let edad1 = prompt('Ingrese la edad de la persona: ');
 
 const personas = [{id=1, nombre="Emiliano",edad=32},
 {id=2, nombre="Corina", edad=22},
@@ -29,4 +33,3 @@ for (const persona of personas){
                             <p> Edad: ${persona.edad}</p> `
     document.body.appendChild(conteiner);
 }
-
