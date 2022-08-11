@@ -3,25 +3,25 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             nombre: 'Nike',
-            precio: 1,
+            precio: 25000,
             imagen: 'Nike.jpg'
         },
         {
             id: 2,
             nombre: 'Adidas',
-            precio: 1.2,
+            precio: 220000,
             imagen: 'Adidas.jpg'
         },
         {
             id: 3,
             nombre: 'Topper',
-            precio: 2.1,
+            precio: 15000,
             imagen: 'Topper.jpg'
         },
         {
             id: 4,
             nombre: 'Ringo',
-            precio: 0.6,
+            precio: 18500,
             imagen: 'Ringo.jpg'
         }
 
@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function aniadirProductoAlCarrito(evento) {
         carrito.push(evento.target.getAttribute('marcador'))
         renderizarCarrito();
-
     }
 
     function renderizarCarrito() {
@@ -82,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 0);
             const miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${divisa}${miItem[0].nombre} - ${miItem[0].precio}`;
+            miNodo.textContent = `${divisa} ${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}`;
             const miBoton = document.createElement('button');
-            miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+            miBoton.classList.add('btn', 'btn-secondary', 'mx-10');
             miBoton.textContent = 'X';
             miBoton.style.marginLeft = '1rem';
             miBoton.dataset.item = item;
